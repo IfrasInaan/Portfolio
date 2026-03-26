@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/tplogo1.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="header-text">
+                <p>AI/ML Engineer</p>
+                <h1>Hi, I am <span>Ahmed Ifras</span><br> From Sri Lanka</h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------about--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/mypic6.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a Computer Science graduate with a passion for Machine Learning and Data Analysis. I enjoy
+                        working with datasets, building predictive models, and extracting meaningful insights. I have
+                        experience in data preprocessing, feature engineering, model training, and data visualization
+                        using tools like Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn. I am eager to apply my
+                        skills to solve real-world problems and explore new AI technologies.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Machine Learning</span><br>Building predictive models using supervised learning
+                                algorithms</li>
+                            <li><span>Data Preprocessing</span><br>Cleaning, transforming, and preparing datasets for
+                                machine learning</li>
+                            <li><span>Data Analysis</span><br>Exploring datasets and extracting insights using Pandas
+                                and NumPy</li>
+                            <li><span>Feature Engineering</span><br>Selecting and transforming features to improve model
+                                performance</li>
+                            <li><span>Model Training</span><br>Training and evaluating models using Scikit-learn</li>
+                            <li><span>Data Visualization</span><br>Visualizing data patterns using Matplotlib and
+                                Seaborn</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li>
+                                <span>House Price Prediction</span><br>
+                                Built a machine learning model to predict house prices using data preprocessing, feature
+                                selection, and regression algorithms
+                            </li>
+
+                            <li>
+                                <span>Celebrity Image Classification</span><br>
+                                Developed an image classification model to identify celebrities using machine learning
+                                techniques and image processing
+                            </li>
+
+                            <li>
+                                <span>AI-driven ERP System (Group Project)</span><br>
+                                Contributed to building an AI-based ERP system for automating business processes and
+                                improving efficiency
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2025</span><br>Bachelor of Computer Science - PAF-IAST, Pakistan</li>
+                            <li><span>Final Year Project</span><br>AI-driven ERP System</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------services--------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>Predictive Modeling</h2>
+                    <p>Developing machine learning models for prediction tasks such as house price estimation and
+                        classification problems.</p>
+                    <a href="#" onclick="openModal('predictive')">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Data Preprocessing</h2>
+                    <p>Cleaning and transforming data using techniques like handling missing values, encoding, and
+                        feature engineering.</p>
+                    <a href="#" onclick="openModal('preprocessing')">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>AI Solutions</h2>
+                    <p>Applying machine learning techniques to solve real-world problems, including ERP system
+                        automation and image classification.</p>
+                    <a href="#" onclick="openModal('ai')">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-data"></div>
+        </div>
+    </div>
+    <!------------------portfolio------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/mw1.jpg">
+                    <div class="layer">
+                        <h3>House Price Prediction</h3>
+                        <p>Built a machine learning model to predict house prices using data preprocessing, feature
+                            engineering, and regression techniques.</p>
+                        <a href="https://github.com/IfrasInaan/House-price-prediction" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/mw2.jpg">
+                    <div class="layer">
+                        <h3>Celebrity Image Classification</h3>
+                        <p>Developed an image classification system to identify celebrities using machine learning and
+                            image processing techniques.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/mw3.jpg">
+                    <div class="layer">
+                        <h3>AI-driven ERP System</h3>
+                        <p>Contributed to building an AI-based ERP system to automate business processes and improve
+                            operational efficiency.</p>
+                        <a href="https://github.com/IfrasInaan/AI_Driven_BIS_ERP-new-feature-branch" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!--------------contact---------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>ahmedifras2001@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +94 70 390 7674</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/ahmed.ifras/" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/itz.my.gym.life/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/ahmed-ifras/" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://github.com/IfrasInaan/" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="https://x.com/ahd_ifras_inn" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                    <a href="image/Ahmed_Ifras_CV.pdf" target="_blank" download="Ahmed_Ifras_CV.pdf" class="btn btn2">Download CV</a>
+                    <!--<a href="image/Ahmed_Ifras_CV.pdf?raw=true" target="_blank" onclick="downloadCV(event)" class="btn btn2">Download CV</a>-->
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz2SDZTDC1nhuN5VM_QTVMwEUcrLPiJdePCj5py5x9V3ZhbVr8SY-vOQuN0EkHtD3Rk3A/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <!--<script>
+function downloadCV(e) {
+    e.preventDefault();
+    
+    const link = document.createElement('a');
+    link.href = 'image/Ahmed_Ifras_CV.pdf';
+    link.download = 'Ahmed_Ifras_CV.pdf';
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+</script>-->
+    <script>
+        function openModal(type) {
+            const modal = document.getElementById("service-modal");
+            const content = document.getElementById("modal-data");
+
+            if (type === "predictive") {
+                content.innerHTML = `
+        <h2>Predictive Modeling</h2>
+        <p>I develop robust machine learning models to solve real-world prediction and classification problems using structured and unstructured data.</p>
+        
+        <h3>Key Capabilities:</h3>
+        <ul>
+            <li>Regression and classification model development</li>
+            <li>Model training, validation, and performance optimization</li>
+            <li>Feature engineering to improve predictive accuracy</li>
+            <li>Model evaluation using metrics such as accuracy, precision, and recall</li>
+        </ul>
+
+        <h3>Featured Project:</h3>
+        <p><b>House Price Prediction System</b></p>
+        <ul>
+            <li>Developed predictive models using Linear Regression, Decision Trees, and KNN</li>
+            <li>Improved model accuracy through data cleaning and feature engineering</li>
+            <li>Built an interactive web interface for real-time predictions</li>
+        </ul>
+
+        <h3>Technologies Used:</h3>
+        <p>Python, Scikit-learn, Pandas, NumPy, HTML, CSS, JavaScript</p>
+        `;
+            }
+
+            if (type === "preprocessing") {
+                content.innerHTML = `
+        <h2>Data Preprocessing & Feature Engineering</h2>
+        <p>I transform raw and unstructured data into clean, meaningful datasets that improve machine learning model performance.</p>
+        
+        <h3>Key Capabilities:</h3>
+        <ul>
+            <li>Handling missing values and outliers</li>
+            <li>Encoding categorical variables</li>
+            <li>Feature scaling and normalization</li>
+            <li>Advanced feature extraction techniques</li>
+        </ul>
+
+        <h3>Featured Project:</h3>
+        <p><b>Celebrity Image Classification</b></p>
+        <ul>
+            <li>Developed a full ML pipeline from raw image data to deployment</li>
+            <li>Used OpenCV Haar Cascades for accurate face detection</li>
+            <li>Applied Wavelet Transforms for multi-resolution feature extraction</li>
+            <li>Benchmarked models (KNN, SVM, Logistic Regression) and selected SVM using GridSearchCV</li>
+            <li>Analyzed performance using confusion matrices and classification reports</li>
+        </ul>
+
+        <h3>Technologies Used:</h3>
+        <p>Python, OpenCV, Scikit-learn, NumPy, Pandas, PyWavelets</p>
+        `;
+            }
+
+            if (type === "ai") {
+                content.innerHTML = `
+        <h2>AI Solutions & Intelligent Systems</h2>
+        <p>I design and develop AI-driven systems that integrate machine learning with real-world business applications.</p>
+        
+        <h3>Key Capabilities:</h3>
+        <ul>
+            <li>AI-based automation for business processes</li>
+            <li>Demand forecasting using machine learning</li>
+            <li>Integration of ERP, SCM, and CRM systems</li>
+            <li>Scalable system design and architecture</li>
+        </ul>
+
+        <h3>Featured Project:</h3>
+        <p><b>AI-Driven ERP System (Final Year Group Project)</b></p>
+        <ul>
+            <li>Collaborated in a team to develop a Business Information System integrating ERP, SCM, and CRM modules</li>
+            <li>Built modules for demand planning, inventory control, procurement, and employee management</li>
+            <li>Implemented AI-based demand forecasting models for improved decision-making</li>
+            <li>Designed scalable architecture for process automation and operational efficiency</li>
+        </ul>
+
+        <h3>Technologies Used:</h3>
+        <p>ASP.NET MVC, SQL Server (SSMS), Python (ML integration)</p>
+
+        <h3>Core Skills Applied:</h3>
+        <p>Machine Learning, Data Analysis, System Design, Problem Solving</p>
+        `;
+            }
+
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("service-modal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
