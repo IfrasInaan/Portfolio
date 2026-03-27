@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio website</title>
+    <meta name="description" content="Ahmed Ifras Portfolio - AI/ML Engineer & Computer Science Graduate">
+    <title>Ahmed Ifras | Portfolio</title>
+    <link rel="icon" href="image/tplogo1.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -25,6 +27,7 @@
                 <i class="fas fa-bars" onclick="openmenu()"></i>
 
             </nav>
+            <div id="menu-overlay" onclick="closemenu()"></div>
             <div class="header-text">
                 <p>AI/ML Engineer</p>
                 <h1>Hi, I am <span>Ahmed Ifras</span><br> From Sri Lanka</h1>
@@ -53,44 +56,130 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Machine Learning</span><br>Building predictive models using supervised learning
-                                algorithms</li>
-                            <li><span>Data Preprocessing</span><br>Cleaning, transforming, and preparing datasets for
-                                machine learning</li>
-                            <li><span>Data Analysis</span><br>Exploring datasets and extracting insights using Pandas
-                                and NumPy</li>
-                            <li><span>Feature Engineering</span><br>Selecting and transforming features to improve model
-                                performance</li>
-                            <li><span>Model Training</span><br>Training and evaluating models using Scikit-learn</li>
-                            <li><span>Data Visualization</span><br>Visualizing data patterns using Matplotlib and
-                                Seaborn</li>
+                            <li>
+                                <span>Machine Learning</span><br>
+                                Designing and building predictive models using supervised learning algorithms such as
+                                regression and classification.<br>
+                                Applying algorithms like Linear Regression, Logistic Regression, Decision Trees, KNN,
+                                SVM, and XGBoost for real-world problems.<br>
+                                Experience in building end-to-end ML pipelines including training, testing, evaluation,
+                                and deployment integration.<br>
+                                Working on projects such as demand forecasting, house price prediction, and image
+                                classification to derive actionable insights.
+                            </li>
+
+                            <li>
+                                <span>Data Preprocessing</span><br>
+                                Cleaning raw datasets by handling missing values, duplicates, and inconsistent data
+                                entries.<br>
+                                Performing data transformation techniques such as encoding categorical variables and
+                                scaling numerical features.<br>
+                                Preparing structured datasets using Pandas and NumPy for efficient model training.<br>
+                                Ensuring data quality and consistency to improve overall model performance.
+                            </li>
+
+                            <li>
+                                <span>Data Analysis</span><br>
+                                Conducting exploratory data analysis (EDA) to understand data distributions and
+                                relationships.<br>
+                                Identifying trends, patterns, and correlations between variables using statistical
+                                methods.<br>
+                                Summarizing datasets using descriptive statistics such as mean, median, variance, and
+                                standard deviation.<br>
+                                Extracting meaningful insights to support feature selection and model decision-making.
+                            </li>
+
+                            <li>
+                                <span>Feature Engineering</span><br>
+                                Selecting relevant features that contribute most to model performance.<br>
+                                Creating new features from existing data to improve predictive accuracy.<br>
+                                Applying transformations such as normalization, standardization, and dimensional
+                                adjustments.<br>
+                                Using domain knowledge to refine features and reduce noise in datasets.
+                            </li>
+
+                            <li>
+                                <span>Model Training</span><br>
+                                Training machine learning models using Scikit-learn with proper dataset splitting
+                                techniques.<br>
+                                Evaluating models using metrics such as accuracy, precision, recall, F1-score, and
+                                confusion matrix.<br>
+                                Performing cross-validation to ensure model generalization on unseen data.<br>
+                                Comparing multiple models to select the best-performing algorithm for a given problem.
+                            </li>
+
+                            <li>
+                                <span>Data Visualization</span><br>
+                                Creating visual representations of data using Matplotlib and Seaborn.<br>
+                                Plotting graphs such as histograms, bar charts, scatter plots, and heatmaps to analyze
+                                data patterns.<br>
+                                Visualizing correlations and distributions to better understand datasets.<br>
+                                Presenting insights in a clear and meaningful way to support analysis and
+                                decision-making.
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="projects">
                         <ul>
                             <li>
                                 <span>House Price Prediction</span><br>
-                                Built a machine learning model to predict house prices using data preprocessing, feature
-                                selection, and regression algorithms
+                                Developed a regression-based machine learning model to predict house prices using
+                                structured datasets.<br>
+                                Performed data preprocessing including handling missing values, encoding categorical
+                                variables, and feature scaling.<br>
+                                Applied multiple regression algorithms such as Linear Regression, Decision Trees, and
+                                KNN to compare performance.<br>
+                                Used GridSearchCV for hyperparameter tuning to optimize model parameters and improve
+                                prediction accuracy.<br>
+                                Improved model performance through feature engineering and careful selection of relevant
+                                features.<br>
+                                Evaluated model using regression metrics and validated results to ensure
+                                generalization.<br>
+                                Built a simple interactive web interface using HTML, CSS, and JavaScript to allow users
+                                to input data and get real-time predictions.
                             </li>
 
                             <li>
                                 <span>Celebrity Image Classification</span><br>
-                                Developed an image classification model to identify celebrities using machine learning
-                                techniques and image processing
+                                Developed an image classification pipeline to identify celebrities from facial
+                                images.<br>
+                                Used OpenCV Haar Cascades for face detection and extraction of facial regions from
+                                images.<br>
+                                Applied Wavelet Transforms for feature extraction to capture multi-resolution image
+                                features.<br>
+                                Trained multiple machine learning models including KNN, SVM, and Logistic
+                                Regression.<br>
+                                Used GridSearchCV for hyperparameter tuning to optimize model performance and select the
+                                best parameters.<br>
+                                Evaluated models using classification metrics such as precision, recall, F1-score, and
+                                confusion matrix.<br>
+                                Selected SVM as the best-performing model based on evaluation results and achieved
+                                accuracy.
                             </li>
 
                             <li>
                                 <span>AI-driven ERP System (Group Project)</span><br>
-                                Contributed to building an AI-based ERP system for automating business processes and
-                                improving efficiency
+                                Contributed to the development of an AI-driven Enterprise Resource Planning (ERP) system
+                                for business process automation.<br>
+                                Designed and implemented demand forecasting models using Machine Learning techniques
+                                such as XGBoost and Scikit-learn.<br>
+                                Analyzed historical business data using Pandas to generate predictive insights for
+                                decision-making.<br>
+                                Developed core modules including inventory management, procurement, employee management,
+                                and sales tracking.<br>
+                                Worked on full-stack integration using ASP.NET MVC (C#) for backend and HTML, CSS,
+                                JavaScript for frontend.<br>
+                                Used SQL Server for database design and management, ensuring efficient data storage and
+                                retrieval.<br>
+                                Integrated machine learning models with the system to provide automated predictions and
+                                improve operational efficiency.
                             </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2021 - 2025</span><br>Bachelor of Computer Science - PAF-IAST, Pakistan</li>
-                            <li><span>Final Year Project</span><br>AI-driven ERP System</li>
+                            <li><span>Final Year Project</span><br>AI-driven ERP System (Machine Learning-based demand forecasting and business process automation)</li>
                         </ul>
                     </div>
                 </div>
@@ -107,7 +196,7 @@
                     <h2>Predictive Modeling</h2>
                     <p>Developing machine learning models for prediction tasks such as house price estimation and
                         classification problems.</p>
-                    <a href="#" onclick="openModal('predictive')">Learn more</a>
+                    <a href="javascript:void(0)" onclick="openModal('predictive')">Learn more</a>
                 </div>
 
                 <div>
@@ -115,7 +204,7 @@
                     <h2>Data Preprocessing</h2>
                     <p>Cleaning and transforming data using techniques like handling missing values, encoding, and
                         feature engineering.</p>
-                    <a href="#" onclick="openModal('preprocessing')">Learn more</a>
+                    <a href="javascript:void(0)" onclick="openModal('preprocessing')">Learn more</a>
                 </div>
 
                 <div>
@@ -123,7 +212,7 @@
                     <h2>AI Solutions</h2>
                     <p>Applying machine learning techniques to solve real-world problems, including ERP system
                         automation and image classification.</p>
-                    <a href="#" onclick="openModal('ai')">Learn more</a>
+                    <a href="javascript:void(0)" onclick="openModal('ai')">Learn more</a>
                 </div>
             </div>
         </div>
@@ -155,7 +244,7 @@
                         <h3>Celebrity Image Classification</h3>
                         <p>Developed an image classification system to identify celebrities using machine learning and
                             image processing techniques.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -169,7 +258,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <a href="projects.html" class="btn">See more</a>
         </div>
     </div>
     <!--------------contact---------------->
@@ -178,8 +267,15 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>ahmedifras2001@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> +94 70 390 7674</p>
+                    <p>
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <a
+                            href="mailto:ahmedifras2001@gmail.com?subject=Contact from Portfolio">ahmedifras2001@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+94703907674">+94 70 390 7674</a>
+                    </p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/ahmed.ifras/" target="_blank">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -200,8 +296,14 @@
                         <a href="https://x.com/ahd_ifras_inn" target="_blank">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
+
+                        <a href="https://wa.me/94703907674?text=Hello Ahmed Ifras, I found your portfolio and want to contact you"
+                            target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
                     </div>
-                    <a href="image/Ahmed_Ifras_CV.pdf" target="_blank" download="Ahmed_Ifras_CV.pdf" class="btn btn2">Download CV</a>
+                    <a href="image/Ahmed_Ifras_CV.pdf" target="_blank" download="Ahmed_Ifras_CV.pdf"
+                        class="btn btn2">Download CV</a>
                     <!--<a href="image/Ahmed_Ifras_CV.pdf?raw=true" target="_blank" onclick="downloadCV(event)" class="btn btn2">Download CV</a>-->
                 </div>
                 <div class="contact-right">
@@ -232,9 +334,9 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
-    <script>
+    <!-- <script>
 
-        var sidemeu = document.getElementById("sidemenu");
+       var sidemeu = document.getElementById("sidemenu");
 
         function openmenu() {
             sidemeu.style.right = "0";
@@ -243,6 +345,51 @@
             sidemeu.style.right = "-200px";
         }
 
+    </script>-->
+    <!-- <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+        // ✅ Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+            const menu = document.getElementById("sidemenu");
+            const menuIcon = document.querySelector(".fa-bars");
+            const closeIcon = document.querySelector(".fa-times");
+
+            // Check if menu is open
+            if (menu.style.right === "0px") {
+
+                // If click is outside menu + not on icons
+                if (
+                    !menu.contains(event.target) &&
+                    !menuIcon.contains(event.target) &&
+                    !closeIcon.contains(event.target)
+                ) {
+                    closemenu();
+                }
+            }
+        });
+    </script>-->
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        var overlay = document.getElementById("menu-overlay");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+            overlay.style.display = "block";
+        }
+
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+            overlay.style.display = "none";
+        }
     </script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbz2SDZTDC1nhuN5VM_QTVMwEUcrLPiJdePCj5py5x9V3ZhbVr8SY-vOQuN0EkHtD3Rk3A/exec'
@@ -364,10 +511,12 @@ function downloadCV(e) {
             }
 
             modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // ADD THIS
         }
 
         function closeModal() {
             document.getElementById("service-modal").style.display = "none";
+            document.body.style.overflow = "auto"; // ADD THIS
         }
     </script>
 </body>

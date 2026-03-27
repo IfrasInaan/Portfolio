@@ -4,9 +4,11 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     background: #080808;
     color: #C9D1D9;
@@ -30,6 +32,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+nav ul {
+    z-index: 2;
 }
 
 .logo {
@@ -306,6 +312,15 @@ nav ul li a:hover::after {
     font-size: 25px;
 }
 
+.contact-left p a {
+    color: #C9D1D9;
+    text-decoration: none;
+}
+
+.contact-left p a:hover {
+    color: #2c6a68;
+}
+
 .social-icons {
     margin-top: 30px;
 }
@@ -327,13 +342,21 @@ nav ul li a:hover::after {
 .btn.btn2 {
     display: inline-block;
     background: #2c6a68;
+    transition: 0.3s ease;
 }
+.btn.btn2:hover {
+    background: #1d4240;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
 
 .contact-right form {
     width: 100%;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -352,11 +375,110 @@ form .btn2 {
     cursor: pointer;
 }
 
+#msg {
+    color: #e0532c;
+    margin-top: -40px;
+    display: block;
+}
+
+/* MODAL DESIGN */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: #1C1C1C;
+    margin: 10% auto;
+    padding: 25px;
+    width: 50%;
+    border-radius: 10px;
+    color: #C9D1D9;
+
+    max-height: 80vh;
+    /* ADD THIS */
+    overflow-y: auto;
+    /* ADD THIS */
+}
+
+.modal-content h2 {
+    color: #2c6a68;
+    margin-bottom: 15px;
+}
+
+.modal-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.modal-content ul li {
+    margin: 8px 0;
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*----------------------*/
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+    display: none;
+}
+
+/*---------------------------*/
+
 /*--------------------css for samll screens------------*/
 
 
 nav .fas {
     display: none;
+}
+
+/* 
+.back-arrow {
+    display: none;
+}
+
+.back-home-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff4c60;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+*/
+/*---------goback arrow------*/
+.back-arrow {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.back-arrow:hover {
+    background-color: #2c6a68;
 }
 
 @media only screen and (max-width: 600px) {
@@ -400,6 +522,7 @@ nav .fas {
         position: absolute;
         top: 25px;
         left: 25px;
+        font-size: 10px;
         cursor: pointer;
     }
 
@@ -424,53 +547,87 @@ nav .fas {
         font-size: 16px;
         margin-right: 20px;
     }
-    .contact-left, .contact-right{
+
+    .contact-left,
+    .contact-right {
         flex-basis: 100%;
     }
 
-}
-#msg{
-    color: #e0532c;
-    margin-top: -40px;
-    display: block;
-}
-/* MODAL DESIGN */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
+    /*-------------*/
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+        padding: 15px;
+        max-height: 80vh;
+        /* important */
+        overflow-y: auto;
+        /* enables scroll */
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content p,
+    .modal-content li {
+        font-size: 14px;
+    }
+
+    /*---------------------------*/
+    .work:hover .layer {
+        height: 0%;
+        /* disable hover effect on mobile */
+    }
+
+    .layer {
+        height: 100%;
+        /* always show content */
+        padding: 10px 20px;
+        /* reduce padding for small screen */
+        font-size: 13px;
+    }
+
+    .layer h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .layer p {
+        font-size: 12px;
+    }
+
+    .layer a {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    /*----projects-----*/
+
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+
+    /*---------go back------*/
+    .back-arrow {
+        
+            display: block;
+            font-size: 12px;
+            padding: 8px;
+        
+    }
+
+
+
 }
 
-.modal-content {
-    background: #1C1C1C;
-    margin: 10% auto;
-    padding: 25px;
-    width: 50%;
-    border-radius: 10px;
-    color: #C9D1D9;
-}
+@media only screen and (min-width: 601px) {
+    .back-arrow {
+        display: block;
+        font-size: 16px;
+        padding: 10px;
+    }
 
-.modal-content h2 {
-    color: #2c6a68;
-    margin-bottom: 15px;
-}
 
-.modal-content ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.modal-content ul li {
-    margin: 8px 0;
-}
-
-.close {
-    float: right;
-    font-size: 25px;
-    cursor: pointer;
 }
